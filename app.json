@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "As Torres \u00b7 Personagens",
+    "slug": "as-torres-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.astorres.personagens"
+    },
+    "android": {
+      "package": "com.astorres.personagens"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-dev-client"
+    ]
+  }
+}
