@@ -1,13 +1,16 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Alert, BackHandler, FlatList, KeyboardAvoidingView, Platform, Pressable, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, BackHandler, FlatList, KeyboardAvoidingView, Platform, Pressable, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import * as SecureStore from 'expo-secure-store';
+import * as SecureStore from './src/session-storage';
+import Alert from './src/dialogs';
 import { createApi } from './src/api';
 import { draftFrom, groups, identity, labels, resources, toPayload } from './src/character';
 import template from './src/agent-template.json';
 
 const SESSION_KEY = 'torres.mobile.session';
-const URL = process.env.EXPO_PUBLIC_API_URL;
+const URL = Platform.OS === 'web' && typeof window !== 'undefined'
+  ? `${window.location.origin}/api`
+  : process.env.EXPO_PUBLIC_API_URL;
 const emptyCharacter = draftFrom(template);
 for (const key of ['name', 'player-name', 'age', 'formation']) emptyCharacter.caractheristics[key] = '';
 emptyCharacter.class = ''; 

@@ -15,6 +15,11 @@
     "plugins": [
       "expo-secure-store",
       "expo-dev-client"
-    ]
+    ],
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "name": "As Torres \u00b7 Personagens"
+    }
   }
 }

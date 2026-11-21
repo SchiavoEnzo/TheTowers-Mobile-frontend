@@ -10,15 +10,20 @@
     "ios": "expo run:ios",
     "test": "node --test",
     "check": "expo install --check",
-    "export": "expo export --platform android --platform ios"
+    "export": "expo export --platform android --platform ios",
+    "apk": "bash scripts/build-apk.sh",
+    "build:web": "expo export --platform web",
+    "web": "expo start --web"
   },
   "dependencies": {
     "expo": "~55.0.0",
     "expo-dev-client": "~55.0.0",
     "expo-secure-store": "~55.0.0",
     "react": "19.2.0",
+    "react-dom": "^19.2.0",
     "react-native": "^0.83.10",
-    "react-native-safe-area-context": "~5.6.2"
+    "react-native-safe-area-context": "~5.6.2",
+    "react-native-web": "^0.21.4"
   },
   "engines": {
     "node": ">=20.19.4"
