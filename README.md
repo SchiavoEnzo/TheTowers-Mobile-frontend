@@ -17,7 +17,7 @@ O aplicativo depende de conexão com a API. Não inclui campanhas, ameaças, hom
 Com JDK 17, Android SDK 36, Build Tools 36.0.0, NDK 27.1.12297006 e CMake 3.22.1 disponíveis, configure `JAVA_HOME` e `ANDROID_HOME` e execute:
 
 ```sh
-EXPO_PUBLIC_API_URL=http://192.168.0.15:3002/api npm run apk
+EXPO_PUBLIC_API_URL=https://ttmobile-three.vercel.app/api npm run apk
 ```
 
 O comando gera `../AsTorres-Mobile.apk` e seu checksum `../AsTorres-Mobile.apk.sha256`. O APK inclui o JavaScript e suporta celulares ARM de 32 e 64 bits; não precisa do Metro nem do Expo Go. Usa a variante release com a assinatura de teste do template Android, destinada à instalação direta para demonstração, não à publicação na loja.
